@@ -19,7 +19,7 @@ php
 go
 --
 
-* go语音圣经(https://docs.ruanjiadeng.com/gopl-zh/index.html)
+* [go语音圣经](https://docs.ruanjiadeng.com/gopl-zh/index.html)
 
 
 
@@ -47,3 +47,4 @@ some tools
 * pdf for windows [sumatraPdf](http://www.sumatrapdfreader.org/)
 * virtualBox [virtualBox](https://www.virtualbox.org/)
 * lantern free works for internet [lantern](https://github.com/getlantern/lantern)
+* [libreoffice 开源办公套件](https://www.libreoffice.org/)
