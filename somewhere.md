@@ -16,6 +16,11 @@ php
 * packagist [packagist](https://packagist.org/)
 * ircmaxell [ircmaxell](http://blog.ircmaxell.com/2012/07/what-generators-can-do-for-you.html)
 
+go
+--
+
+* go语音圣经(https://docs.ruanjiadeng.com/gopl-zh/index.html)
+
 
 
 git
@@ -41,3 +46,4 @@ some tools
 
 * pdf for windows [sumatraPdf](http://www.sumatrapdfreader.org/)
 * virtualBox [virtualBox](https://www.virtualbox.org/)
+* lantern free works for internet [lantern](https://github.com/getlantern/lantern)
