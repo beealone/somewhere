@@ -36,6 +36,8 @@ os
 * linux basic study [arch linux](https://wiki.archlinux.org/)
 * [鸟哥的私房菜](http://linux.vbird.org/)
 * [树莓派Linux硬件](https://www.raspberrypi.org/)
+* [學習 Linux](http://www.study-area.org/linux/linuxfr.htm)
+* [Arch Linux](https://wiki.archlinux.org/index.php/Main_page_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
 
 develop tools
 -------------
