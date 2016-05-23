@@ -89,6 +89,11 @@
 
 ``/higo/detail``
 
+####请求方式####
+
+``GET``
+
+
 ####参数####
 
 |  参数  | 含义                    | 是否必须              |允许值的范围及含义                   |
@@ -192,6 +197,120 @@
   "content": []
 }
 ``
+
+海淘确认订单
+-----------
+
+####接口地址####
+
+`/higo/order`
+
+####请求方式####
+
+``POST``
+
+####参数####
+
+|  参数   | 含义                    | 是否必须              |允许值的范围及含义                   |
+|---------|-------------------------|-----------------------|-------------------------------------|
+|uid      | 用户id                  | 是                    | 用户登录成功后返回uid               |
+|token    | 用户token               | 是                    | 用户登录成功后返回的token           |
+|goods_id | 海淘商品id              | 是                    | 商品列表中的id                      |
+|goods_num| 购买数量                | 否                    | 要购买的商品数量为空是默认为1件     |
+
+####返回信息####
+
+返回格式json
+
+#####成功####
+
+`{
+   "status": 200,
+   "msg": "获取海淘商品结算数据成功",
+   "content": {
+     "goods_info": {
+       "goods_id": "1101686",
+       "name": "海淘测试一,",
+       "product_sku": "P5694875C841BA:1",
+       "uptime": "0",
+       "downtime": "0",
+       "newly": "0",
+       "seaamoy_price": "13.00",
+       "seaamoy_pic": "http://images.test.zhiwo.com/product/2016/0119/18285568789856083639.jpg",
+       "market_price": "0.00",
+       "lowest_price": "0.00",
+       "brief": "◎贺！台北销售破100万支！台湾紧急空运中国独家上市！\r\n ◎连日韩名星、女人节目老师、名模、杂志编辑、記者也疯狂抢购、讨论！\r\n ◎日本、韩国、台湾的最大美容讨论网站最力推荐商品！！!",
+       "big_pic": "http://images.test.zhiwo.com/product/2016/0128/7444360269170012738.jpg",
+       "small_pic": "http://images.test.zhiwo.com/product/2016/0119/13468781174507945589.jpg",
+       "group_big_pic": "",
+       "group_main_pic": "/static/images/empty_pic.jpg",
+       "group_small_pic": "",
+       "intro": "",
+       "use_method": "",
+       "ext_attribute": "a:14:{s:9:\"原产地\";s:0:\"\";s:6:\"规格\";s:0:\"\";s:6:\"质地\";s:0:\"\";s:12:\"生产日期\";s:4:\"2016\";s:9:\"保质期\";s:4:\"2016\";s:6:\"包装\";s:0:\"\";s:6:\"功效\";s:12:\"美容养颜\";s:12:\"适合肤质\";s:0:\"\";s:12:\"适合人群\";s:0:\"\";s:12:\"使用方法\";s:0:\"\";s:12:\"产品介绍\";s:0:\"\";s:24:\"美容顾问使用体验\";s:0:\"\";s:12:\"特别说明\";s:0:\"\";s:12:\"温馨提示\";s:234:\"由于部分商品包装更换较为频繁，因此您收到的货品有可能与图片不完全一致，请您以收到的商品实物为准，同时我们会尽量做到及时更新，由此给您带来不便多多谅解，谢谢！\";}",
+       "comments_count": "0",
+       "group_virtual_buy_num": "0",
+       "cat_id": "197",
+       "brand_id": "420",
+       "efficacy_ids": "",
+       "stock": 195,
+       "sales_channel": "4",
+       "goods_point": "0.0",
+       "max_buy": "0",
+       "min_buy": "0",
+       "marketable": "true",
+       "max_buy_limit_time": "0",
+       "orderlimit": "0",
+       "userlimit": "0",
+       "taxation": 11.5,
+       "_taxation": "50.00",
+       "efficacy_tags": [],
+       "favorite": "2",
+       "total_price": 26,
+       "total_taxation": 23,
+       "seaamoy_num": 2,
+       "cat_name": "单方纯精油",
+       "need_taxation": 13
+     },
+     "address_info": {
+       "addr_id": "335",
+       "member_id": "797323",
+       "name": "沙丽娜",
+       "area": "山东省/德州市/宁津县",
+       "province": "山东省",
+       "city": "德州市",
+       "district": "宁津县",
+       "addr": "山东省-德州市-宁津县 北京市海淀区大望路啦啦啦啦",
+       "zip": "100010",
+       "tel": "",
+       "mobile": "18810552193",
+       "email": "",
+       "idcard": "12022******5023",
+       "def_addr": "1"
+     },
+     "goods_price": "26.00",
+     "need_taxation": "13.00",
+     "delivery_channel": "Express_5",
+     "account_balance": "39552.58",
+     "freight": "20.00",
+     "allow_deposit": true,
+     "need_amount": "59.00"
+   }
+ }
+`
+
+#####失败####
+
+`
+{
+  "status": 20X,
+  "msg": "错误信息"
+}`
+
+
+
+
+
 
 
 
