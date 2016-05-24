@@ -307,6 +307,135 @@
   "msg": "错误信息"
 }`
 
+海淘下单
+-------
+
+####接口地址####
+
+`/higo/pay`
+
+####请求方式####
+
+`POST`
+
+####参数####
+
+
+|  参数          | 含义                    | 是否必须              |允许值的范围及含义                       |
+|----------------|-------------------------|-----------------------|-----------------------------------------|
+|uid             | 用户id                  | 是                    | 用户登录成功后返回uid                   |
+|token           | 用户token               | 是                    | 用户登录成功后返回的token               |
+|goods_id        | 海淘商品id              | 是                    | 商品列表中的id                          |
+|goods_num       | 购买数量                | 否                    | 要购买的商品数量为空是默认为1件         |
+|address_id      |收货地址id               | 是                    | 收货地址id，用户选择的地址id            |
+|delivery_channel|配送方式                 | 是                    | 配送方式不支持货到付款，必须Express_5   |
+|gateway         |支付方式                 | 是                    | 支付方式只能为三种Deposit，Alipay,Wcpay |
+|remarks         |用户订单备注             | 否                    | 用户留言，可以为空                      |
+
+
+####返回数据####
+
+返回格式json
+
+#####成功#####
+
+`{
+   "status": 200,
+   "msg": "下单成功",
+   "content": {
+     "order_id": 1605241042230,
+     "receive_name": "沙丽娜",
+     "receive_mobile": "18810552193",
+     "receive_address": "山东省-德州市-宁津县 北京市海淀区大望路啦啦啦啦",
+     "total_amount": "39.50",
+     "balance_amount": "0.00",
+     "gateway": "Wcpay",
+     "address": {
+       "address_id": 335,
+       "receive_name": "沙丽娜",
+       "receive_addr": "山东省-德州市-宁津县 北京市海淀区大望路啦啦啦啦",
+       "receive_mobile": "18810552193",
+       "receive_zip": "100010",
+       "receive_tel": "",
+       "receive_idcard": "12022******5023"
+     },
+     "order_info": {
+       "order_id": 1605241042230,
+       "create_time": 1464057743,
+       "goods_amount": 13,
+       "total_amount": 39.5,
+       "freight": "20.00",
+       "balance_amount": 0,
+       "coupon_amount": 0,
+       "coupon_codes": "",
+       "market_rule_id": 0,
+       "market_rule_type": "",
+       "need_amount": 39.5,
+       "gateway": "Wcpay",
+       "pay_way": "Wcpay",
+       "pay_status": 0,
+       "delivery_channel": "Express_5",
+       "financial_examine": 1,
+       "member_id": "797323",
+       "member_name": "18932669921",
+       "goods_list": [
+         {
+           "gid": "1101686",
+           "from": "seaamoy",
+           "time": 1464057743,
+           "price": "13.00",
+           "num": 1,
+           "free": 2,
+           "vip": 0,
+           "item_price": "13.00",
+           "goods_id": "1101686",
+           "name": "海淘测试一,",
+           "product_sku": "P5694875C841BA:1",
+           "mall_price": 0,
+           "marketable": "true",
+           "stock": 195,
+           "market_price": "0.00",
+           "small_pic": "http://images.test.zhiwo.com/product/2016/0119/13468781174507945589.jpg",
+           "big_pic": "http://images.test.zhiwo.com/product/2016/0128/7444360269170012738.jpg",
+           "min_buy": "0",
+           "max_buy": "0",
+           "max_buy_limit_time": "0",
+           "orderlimit": "0",
+           "userlimit": "0",
+           "comments_count": "0",
+           "pic_thumb": "http://images.test.zhiwo.com/product/2016/0119/13468781174507945589.jpg"
+         }
+       ],
+       "address_id": 335,
+       "receive_name": "沙丽娜",
+       "receive_province": "山东省",
+       "receive_city": "德州市",
+       "receive_district": "宁津县",
+       "receive_addr": "山东省-德州市-宁津县 北京市海淀区大望路啦啦啦啦",
+       "receive_zip": "100010",
+       "receive_tel": "",
+       "receive_mobile": "18810552193",
+       "score_used": "",
+       "score_get": "",
+       "remarks": "123",
+       "order_refer": "app",
+       "order_channel": "",
+       "receive_idcard": "12022******5023",
+       "tax_rate": 6.5,
+       "real_tax_rate": 6.5
+     },
+     "order_sign": false
+   }
+ }
+`
+
+#####错误#####
+
+`{
+    "status":2xx,
+    "msg":"错误信息"
+}
+`
 
 
 
